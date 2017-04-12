@@ -21,7 +21,7 @@ $('.login').on('submit', function(e) {
     alert("YES");
     window.location = "http://scanner.ficik.com" 
 
-    }
+    };
   }, 3000);
 });
 
