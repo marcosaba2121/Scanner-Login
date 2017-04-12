@@ -1,6 +1,8 @@
 var working = false;
-var email = $("#email").val();
-var password = $("#password").val();
+var emailLogin = $(".email").val();
+var passwordLogin = $(".password").val();
+var email = "marcosaba2121@gmail.com"
+var password = "pentium2121"
 
 $('.login').on('submit', function(e) {
   e.preventDefault();
@@ -13,11 +15,12 @@ $('.login').on('submit', function(e) {
   setTimeout(function() {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
-      $state.html('¡Incorrecto!');
+      $state.html(errorMessage);
+      $this.addClass('incorrect');
       $this.removeClass('ok loading');
       working = false;
     });
