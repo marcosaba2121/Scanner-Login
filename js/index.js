@@ -9,7 +9,7 @@ $('.login').on('submit', function(e) {
   var $this = $(this),
     $state = $this.find('button > .state');
   $this.addClass('loading');
-  $state.html('Authenticating');
+  $state.html('Autenticando');
   setTimeout(function() {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
@@ -18,7 +18,8 @@ $('.login').on('submit', function(e) {
       var errorMessage = error.message;
 
       $state.html('¡Incorrecto!');
-      $this.removeClass('ok loading');
+      $this.addClass('loading');
+      $this.removeClass('incorrect loading');
       working = false;
     });
   }, 3000);
