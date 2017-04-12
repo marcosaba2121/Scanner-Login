@@ -15,7 +15,8 @@ $('.login').on('submit', function(e) {
   setTimeout(function() {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
-
+    alert(email):
+    alert(password);
     if ($("#loginEmail").val() == 'admin'){
       if ($("#passwordEmail").val() == 'pass') {
         alert("YES");
