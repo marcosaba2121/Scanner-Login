@@ -27,7 +27,7 @@ $('.login').on('submit', function(e) {
 firebase.auth().onAuthStateChanged(function(user) {
  if (user) {
    // User is signed in.
-   window.location = "http://scanner.ficik.com"
+   window.location = "http://scanner.ficik.com/#/dashboard"
    working = true;
 
  }
