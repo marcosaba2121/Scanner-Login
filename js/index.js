@@ -16,9 +16,9 @@ $('.login').on('submit', function(e) {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
 
-    if (email == email2 && password == password2) {
+    if (email == "admin" && password == "pass") {
 
-    firebase.auth().signInWithEmailAndPassword(email, password) {
+    window.location = "http://scanner.ficik.com" {
       };
     }
   }, 3000);
