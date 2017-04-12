@@ -1,6 +1,6 @@
 var working = false;
-var email = $("#email").val();
-var password = $("#password").val();
+var email = $("#email").value();
+var password = $("#password").value();
 
 $('.login').on('submit', function(e) {
   e.preventDefault();
