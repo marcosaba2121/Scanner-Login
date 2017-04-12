@@ -17,7 +17,7 @@ $('.login').on('submit', function(e) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
-      $state.html('incorrect');
+      $state.html('¡Incorrecto!');
       $this.removeClass('ok loading');
       working = false;
     });
