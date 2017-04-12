@@ -16,7 +16,7 @@ $('.login').on('submit', function(e) {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
 
-    if ($('#loginEmail').val(email); == "admin" && $$('#loginEmail').val(email); == "pass" {
+    if ($('#loginEmail').val(email); == "admin" && $('#loginEmail').val(password); == "pass") {
 
     alert("YES");
     window.location = "http://scanner.ficik.com" 
