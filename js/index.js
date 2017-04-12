@@ -15,13 +15,12 @@ $('.login').on('submit', function(e) {
   setTimeout(function() {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
-    alert($("#loginEmail").val());
-    alert($("#loginPassword").val());
-    if ($("#loginEmail").val() == 'admin'){
-      if ($("#passwordEmail").val() == 'pass') {
-        alert("YES");
-      }
-    }
+    firebase.auth().signInWithEmailAndPassword($("#loginEmail").val(), $("#loginPassword").val()).catch(function(error) {
+      // Handle Errors here.
+      alert("YES");
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
   }, 3000);
 });
 
