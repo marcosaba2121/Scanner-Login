@@ -18,8 +18,8 @@ $('.login').on('submit', function(e) {
 
     if (email == "admin" && password == "pass") {
 
-    window.location = "http://scanner.ficik.com" {
-      };
+    window.location = "http://scanner.ficik.com" 
+
     }
   }, 3000);
 });
