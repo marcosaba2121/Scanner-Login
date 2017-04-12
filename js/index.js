@@ -1,6 +1,6 @@
 var working = false;
-var email = $("#email").value();
-var password = $("#password").value();
+var email = $("#email").val();
+var password = $("#password").val();
 
 $('.login').on('submit', function(e) {
   e.preventDefault();
@@ -12,12 +12,15 @@ $('.login').on('submit', function(e) {
   $state.html('Authenticating');
   setTimeout(function() {
     $this.addClass('ok');
-    $state.html('Welcome back!');
+    $state.html('¡Bienvenido!');
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
+      $this.addClass('bad');
+      $state.html('¡Incorrecto!');
       alert(errorMessage);
+      alert(errorCode);
     });
     setTimeout(function() {
       $state.html('Log in');
