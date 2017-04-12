@@ -17,9 +17,9 @@ $('.login').on('submit', function(e) {
     $state.html('¡Bienvenido!');
     firebase.auth().signInWithEmailAndPassword($("#loginEmail").val(), $("#loginPassword").val()).catch(function(error) {
       // Handle Errors here.
-      alert("YES");
       var errorCode = error.code;
       var errorMessage = error.message;
+      alert(errorMessage);
     });
   }, 3000);
 });
