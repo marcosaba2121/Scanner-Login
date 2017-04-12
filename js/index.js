@@ -17,16 +17,12 @@ $('.login').on('submit', function(e) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
-      $this.addClass('bad');
-      $state.html('¡Incorrecto!');
-      alert(errorMessage);
-      alert(errorCode);
-    });
-    setTimeout(function() {
       $state.html('Log in');
       $this.removeClass('ok loading');
       working = false;
-    }, 4000);
+      alert(errorMessage);
+      alert(errorCode);
+    });
   }, 3000);
 });
 
