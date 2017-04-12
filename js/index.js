@@ -16,12 +16,10 @@ $('.login').on('submit', function(e) {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
 
-    if ($('#loginEmail').val(email); == "admin" && $('#loginEmail').val(password); == "pass") {
-
-    alert("YES");
-    window.location = "http://scanner.ficik.com" 
-
-    };
+    if (email.val() == "admin" && password.val() == "pass") {  
+      window.location = "http://scanner.ficik.com"
+      alert("test");
+    }
   }, 3000);
 });
 
