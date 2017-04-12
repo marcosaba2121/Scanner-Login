@@ -19,6 +19,12 @@ $('.login').on('submit', function(e) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
+      if (errorMessage == "The email address is badly formatted.") {
+
+        $state.html("Usuario o Contrasseña Incorrecta");
+
+      }
+
       $state.html(errorMessage);
       $this.addClass('incorrect');
       $this.removeClass('ok loading');
@@ -31,6 +37,7 @@ firebase.auth().onAuthStateChanged(function(user) {
  if (user) {
    // User is signed in.
    window.location = "http://scanner.ficik.com"
+   working = true;
 
  }
 });
