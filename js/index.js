@@ -1,8 +1,8 @@
 var working = false;
-var emailLogin = $(".email").val();
-var passwordLogin = $(".password").val();
-var email = "marcosaba2121@gmail.com"
-var password = "pentium2121"
+var email = $("#loginEmail").val();
+var password = $("#loginPassword").val();
+var email2 = "marcosaba2121@gmail.com"
+var password2 = "pentium2121"
 
 $('.login').on('submit', function(e) {
   e.preventDefault();
@@ -15,7 +15,7 @@ $('.login').on('submit', function(e) {
   setTimeout(function() {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
-    firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
