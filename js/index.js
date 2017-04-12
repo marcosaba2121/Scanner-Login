@@ -16,9 +16,10 @@ $('.login').on('submit', function(e) {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
 
-    if (email.val() == "admin" && password.val() == "pass") {  
-      window.location = "http://scanner.ficik.com"
-      alert("test");
+    if ($("#loginEmail").val() == 'admin'){
+      if ($("#passwordEmail").val() == 'pass') {
+        alert("YES");
+      }
     }
   }, 3000);
 });
