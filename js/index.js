@@ -15,21 +15,12 @@ $('.login').on('submit', function(e) {
   setTimeout(function() {
     $this.addClass('ok');
     $state.html('¡Bienvenido!');
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
 
-      if (errorMessage == "The email address is badly formatted.") {
+    if (email == email2 && password == password2) {
 
-        $state.html("Usuario o Contrasseña Incorrecta");
-
-      }
-
-      $state.html(errorMessage);
-      $this.addClass('incorrect');
-      $this.removeClass('ok loading');
-      working = false;
-    });
+    firebase.auth().signInWithEmailAndPassword(email, password) {
+      };
+    }
   }, 3000);
 });
 
