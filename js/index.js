@@ -1,6 +1,6 @@
 var working = false;
-var email = "marcosaba2121@gmail.com";
-var password = "pentium2121";
+var email = $("#email").val();
+var password = $("#password").val();
 
 $('.login').on('submit', function(e) {
   e.preventDefault();
@@ -17,11 +17,9 @@ $('.login').on('submit', function(e) {
       var errorCode = error.code;
       var errorMessage = error.message;
 
-      $state.html('Log in');
+      $state.html('incorrect');
       $this.removeClass('ok loading');
       working = false;
-      alert(errorMessage);
-      alert(errorCode);
     });
   }, 3000);
 });
